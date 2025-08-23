@@ -6,20 +6,39 @@
   --dark-purple-background: #3a24ba;
   --text-main-purple: #3e27b8;
   --heading-font-size: clamp(40px, 4.65vw, 4.65vw);
+  --used-heading-font-size: clamp(1.25rem, calc(1.25vw + 19.2px), 3rem);
   --heading-font-weight: 400;
   --light-dark-purple: #e5e3f3;
   --lightest-purple: #f9f9fa;
-  --border-color: #f2f2f2;
+  --border-color: #e5e5e5;
   --small-font-size: 0.75rem:
 }
 
+.small-heading {
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.main-heading-small {
+  font-size: 2rem;
+  font-weight: 400;
+}
+.below-heading-small {
+  font-size: 1.25rem;
+  color: var(--gray-font-color);
+}
+.grey-font-big {
+  font-size: 1.15rem;
+  color: var(--gray-font-color);
+}
 * {
   font-family: var(--main-font-family);
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
+body {
+  padding-top: 60px;
+}
 .logo {
   
   display: flex;
@@ -103,3 +122,47 @@ button {
   height: 16px;
   width: 16px;
 }
+
+.accomplishments {
+  background-color: var(--lightest-purple);
+  max-height: auto;
+  height: 30vh;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+}
+
+.lucide {
+  background-color: var(--light-dark-purple);
+  color: var(--text-main-purple);
+  height: 21px;
+  width: 21px;
+}
+
+.lucide-container {
+  height: 42px;
+  width: 42px;
+  border-radius: 7px;
+  background-color: var(--light-dark-purple);
+  margin-bottom: 14px;
+}
+
+.accomp-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.accomp-cont h2 {
+  color: var(--text-main-purple);
+  font-size: 2rem;
+  font-weight: 400;
+}
+
+.accomp-cont p {
+  color: var(--gray-font-color);
+  font-size: var(--small-font-size);
+  font-weight: 300;
+}
+
