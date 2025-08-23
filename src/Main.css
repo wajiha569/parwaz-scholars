@@ -1,0 +1,105 @@
+:root {
+  --main-font-family: sans-serif;
+  --gray-font-color: #717182;
+  --white-background-color: #fff;
+  --light-purple-background: #eeecf9;
+  --dark-purple-background: #3a24ba;
+  --text-main-purple: #3e27b8;
+  --heading-font-size: clamp(40px, 4.65vw, 4.65vw);
+  --heading-font-weight: 400;
+  --light-dark-purple: #e5e3f3;
+  --lightest-purple: #f9f9fa;
+  --border-color: #f2f2f2;
+  --small-font-size: 0.75rem:
+}
+
+* {
+  font-family: var(--main-font-family);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  
+  display: flex;
+}
+
+h1 {
+  font-size: var(--heading-font-size);
+  font-weight: var(--heading-font-weight);
+}
+
+button {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.apply-now {
+  background-color: var(--dark-purple-background);
+  color: white;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  font-weight: 500;
+}
+
+.explore {
+  background-color: white;
+  color: black;
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  font-weight: 500;
+}
+
+.apply-now:hover,
+.explore:hover {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform: scale(1.05);
+  font-weight: 500;
+}
+
+.star {
+  height: 16px;
+  width: 16px;
+  color: var(--text-main-purple);
+}
+
+.hover {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+}
+
+.hover:hover {
+  transition: transform 0.5s ease, box-shadow 0.5s ease;
+  transform: scale(1.05);
+  font-weight: 500;
+}
+
+.h2{
+  font-size: 2rem;
+}
+
+.h2p {
+  font-size: 1.25rem;
+
+}
+.align-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.gap-2{
+  display:flex;
+  gap: 1rem;
+}
+
+.footer-logo{
+  background-color: white;
+}
+
+.footer .lucide {
+  background-color: white;
+  height: 16px;
+  width: 16px;
+}
