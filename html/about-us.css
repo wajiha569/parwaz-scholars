@@ -69,7 +69,6 @@
 .values {
   height: 100%;
   width: 100%;
-  //change the max and min for responsiveness
   max-height: 212px;
   max-width: 260px;
   display: flex;
@@ -102,5 +101,100 @@
 }
 .container {
   display: flex;
-  align-items: space-evenly;
+  align-items: center;
+  justify-content: space-evenly;
+  width: 100vw;
+}
+
+.journey {
+  width: 100vw;
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.journey-container span {
+  color: var(--text-main-purple);
+  padding: 3px 5px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border: 1.5px solid var(--text-main-purple);
+  border-radius: 0.5rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.journey-container li {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.journey-container ul {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+}
+.journey-container p {
+  font-size: 1rem;
+  color: var(--gray-font-color);
+}
+
+.impact {
+  color: white;
+  background-color: var(--dark-purple-background);
+  padding: 5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+}
+
+.impact .below-heading-small {
+  color: white;
+}
+
+.impact-text {
+  max-width: 786px;
+  min-width: 421px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 2rem;
+  line-height: 2rem;
+}
+.impact-text .below-heading-small {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.accomps-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  color: white;
+}
+.accomp h2 {
+  color: white;
+  font-size: 1.875rem;
+  font-weight: 400;
+}
+.accomp {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+.accomp p {
+  color: white;
+  font-size: 0.875rem;
+  font-weight: 300;
 }

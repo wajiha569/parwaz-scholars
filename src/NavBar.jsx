@@ -1,6 +1,30 @@
-import React from "react";
+import React, { useEffect, useRef } from "https://esm.sh/react@18.2.0";
 
 export default function NavBar() {
+  const mobileMenuToggleRef = useRef(null);
+  const mobileMenuRef = useRef(null);
+
+  useEffect(() => {
+    const toggleButton = mobileMenuToggleRef.current;
+    const menu = mobileMenuRef.current;
+
+    if (!toggleButton || !menu) return;
+
+    const handleClick = () => {
+      const isExpanded = toggleButton.getAttribute('aria-expanded') === 'true';
+      toggleButton.setAttribute('aria-expanded', !isExpanded);
+      toggleButton.classList.toggle('active');
+      menu.classList.toggle('show');
+    };
+
+    toggleButton.addEventListener('click', handleClick);
+
+    return () => {
+      toggleButton.removeEventListener('click', handleClick);
+    };
+  }, []);
+
+
   return (
     <header>
       <nav 
@@ -16,6 +40,7 @@ export default function NavBar() {
         />
 
         <button 
+          ref={mobileMenuToggleRef}
           className="mobile-menu-toggle" 
           aria-expanded="false" 
           aria-controls="mobile-menu" 
@@ -26,7 +51,7 @@ export default function NavBar() {
           <span className="hamburger"></span>
         </button>
 
-        <div className="center-nav" id="mobile-menu">
+        <div ref={mobileMenuRef} className="center-nav" id="mobile-menu">
           <div className="pages">
             <a href="home.html" className="page-link" aria-current="page">Home</a>
             <a href="about-us.html" className="page-link">About Us</a>
