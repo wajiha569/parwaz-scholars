@@ -1,5 +1,4 @@
-import React, { useEffect, useRef } from "https://esm.sh/react@18.2.0";
-
+import React from "https://esm.sh/react@18.2.0";
 export default function NavBar() {
   const mobileMenuToggleRef = useRef(null);
   const mobileMenuRef = useRef(null);
@@ -26,7 +25,7 @@ export default function NavBar() {
 
 
   return (
-    <header>
+    <>
       <nav 
         className="nav-bar" 
         role="navigation" 
@@ -66,6 +65,6 @@ export default function NavBar() {
           </div>
         </div>
       </nav>
-    </header>
+    </>
   );
 }
