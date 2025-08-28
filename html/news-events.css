@@ -1,25 +1,5 @@
 @import "../src/Main.css";
 
-.introduction {
-  padding: 5rem 0;
-  background-color: var(--light-purple-background);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
-  gap: 1rem;
-}
-
-.introduction-container {
-  width: 100%;
-  max-width: 784px;
-  min-width: 421px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 2rem;
-}
-
 .latest-news-container {
   padding: 3rem 0;
   display: flex;

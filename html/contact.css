@@ -1,0 +1,88 @@
+@import "../src/Main.css";
+
+.contact-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3rem;
+  padding: 5rem 0;
+  align-items: center;
+}
+.contacts {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  padding: 21px;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  align-items: center;
+  height: 210px;
+  width: 278px;
+}
+
+.contacts .lucide {
+  padding: 10px;
+  height: 42px;
+  width: 42px;
+  border-radius: 7px;
+}
+
+.contacts h4 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
+
+.main-contact {
+  font-size: 0.9rem;
+}
+
+.secondary-contact {
+  font-size: 0.8rem;
+  color: var(--gray-font-color);
+}
+.info {
+  font-size: 0.7rem;
+  color: var(--gray-font-color);
+}
+
+.contact-flex {
+  display: flex;
+  gap: 2rem;
+}
+
+.office-hours .lucide {
+  background-color: transparent;
+}
+.office-hours h4 {
+  display: flex;
+  align-items: center;
+  font-weight: 400;
+}
+.office-hours {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  max-width: 588px;
+  min-width: 421px;
+}
+
+.time {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: center;
+}
+
+.time p {
+  font-size: 0.9rem;
+}
+
+.time h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+}
