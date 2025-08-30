@@ -1,4 +1,5 @@
-import React from "https://esm.sh/react@18.2.0";
+import React, { useRef, useEffect } from "react";
+console.log("Footer.jsx loaded successfully");
 export default function Footer() {
   return (
     <>

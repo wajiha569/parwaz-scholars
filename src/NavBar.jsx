@@ -1,4 +1,5 @@
-import React from "https://esm.sh/react@18.2.0";
+import React, { useRef, useEffect } from "react";
+console.log("NavBar.jsx loaded successfully")
 export default function NavBar() {
   const mobileMenuToggleRef = useRef(null);
   const mobileMenuRef = useRef(null);

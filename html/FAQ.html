@@ -5,16 +5,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="../src/Main.css">
     <link rel="stylesheet" href="home.css">
-    <link rel="stylesheet" href="../src/footer.css">
-    <link rel="stylesheet" href="../src/nav-bar.css">
-    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <link rel="stylesheet" href="FAQ.css">
+    <link rel="stylesheet" href="footer.css">
+    <link rel="stylesheet" href="nav-bar.css">
 
     <title>FAQ's</title>
   </head>
   <body>
     <div id="nav-bar"></div>
 
+    <section class="introduction">
+      <form action="/search" method="get">
+        <input type="search" id="search-input" class="search-input" name="query" placeholder="Search FAQs..." required />
+
+        <!--<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-search absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-muted-foreground" aria-hidden="true"><path d="m21 21-4.34-4.34"></path><circle cx="11" cy="11" r="8"></circle></svg>-->
+        <button type="submit" class="apply-now">Search</button>
+      </form>
+    </section>
+
+    <section class="questions">
+      <div class="questions-container">
+
+      </div>
+    </section>
+
     <div class="footer" id="footer"></div>
-    <script type="text/babel" data-type="module" src="../src/Main.jsx"></script>
+    <script type="module" src="../src/Main.jsx"></script>
   </body>
 </html>

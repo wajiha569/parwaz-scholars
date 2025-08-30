@@ -1,7 +1,7 @@
 import React from "https://esm.sh/react@18.2.0";
 import ReactDOM from "react-dom/client";
-import { NavBar } from "./NavBar.jsx";
-import { Footer } from "./Footer.jsx"
+import NavBar  from "./NavBar.jsx";
+import Footer from "./Footer.jsx"
 console.log("Main.jsx loaded successfully");
 
 

@@ -1,3 +1,25 @@
+@import "../src/Main.css";
+
 * {
   box-sizing: border-box;
+}
+
+.search-input {
+  width: clamp(421px, 588px, 588px);
+  padding: 7px 10.5px 7px 35px;
+  background-color: #f3f3f5;
+  border-radius: 5px;
+  border: none;
+}
+
+.introduction {
+  padding: 2rem 0;
+}
+
+.apply-now {
+  padding: 7px 20px;
+}
+
+.questions {
+  padding: 5rem 0;
 }
