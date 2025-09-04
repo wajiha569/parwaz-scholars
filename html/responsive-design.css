@@ -1,0 +1,73 @@
+@media (min-width: 320px) {
+  .portfolio {
+    max-width: 300px;
+  }
+
+  .sara-ahmad {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+@media (max-width: 1332px) {
+  .sarah-ahmad {
+    flex-direction: column;
+  }
+  .success-container {
+    padding: 5rem 1rem;
+  }
+}
+
+@media (max-width: 1000px) {
+  .row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center; /* keeps cards centered */
+  }
+
+  .sarah-ahmad {
+    width: 80%; /* stretch to container width */
+    max-width: 80%; /* avoid overflow */
+    box-sizing: border-box;
+    padding: 0 1rem; /* optional: breathing room on sides */
+  }
+
+  .portfolio {
+    max-width: none; /* allow content inside to also expand */
+  }
+}
+
+@media (max-width: 550px) {
+  .row {
+    flex-direction: column;
+    gap: 2rem;
+    align-items: center; /* keeps cards centered */
+  }
+
+  .sarah-ahmad {
+    width: 100%; /* stretch to container width */
+    max-width: 100%; /* avoid overflow */
+    box-sizing: border-box;
+    padding: 0 1rem; /* optional: breathing room on sides */
+  }
+
+  .portfolio {
+    max-width: none; /* allow content inside to also expand */
+  }
+}
+
+@media (max-width: 784px) {
+  .vision-mission {
+    flex-direction: column;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 14px;
+  }
+  .container {
+    gap: 3rem;
+  }
+
+  .success-container {
+    padding: 5rem 1rem;
+  }
+}

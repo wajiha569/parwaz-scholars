@@ -15,20 +15,31 @@
   align-items: center;
   text-align: center;
   width: 100%;
+  max-width: 800px;
   min-width: 421px;
-  max-width: 786px;
-  gap: 2rem;
-  line-height: 1.7rem;
+  gap: 1rem;
+  margin: 0 14px;
 }
 
-.about h1 {
+.about .edu-heading {
   font-size: var(--used-heading-font-size);
+  line-height: 4rem;
+  width: 100%;
+  display: ruby;
+}
+
+@media (max-width: 723px) {
+  .about .edu-heading {
+    display: block;
+  }
 }
 
 .vision-mission {
   background-color: var(--white-background-color);
   padding: 5rem 0;
   display: flex;
+  gap: 2rem;
+  margin: 0 1rem;
   justify-content: space-evenly;
 }
 
@@ -49,8 +60,25 @@
   color: var(--gray-font-color);
 }
 
+.vision-mission-container .lucide {
+  height: 42px;
+  width: 42px;
+  padding: 9px;
+  border-radius: 10px;
+}
+.vision-mission-container h3 {
+  font-weight: 400;
+  font-size: 1.25rem;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .core-values {
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   background-color: var(--lightest-purple);
   display: flex;
   flex-direction: column;
@@ -101,14 +129,25 @@
 }
 .container {
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: space-evenly;
+  justify-content: center;
   width: 100vw;
+  gap: 5rem;
+}
+
+.values .lucide {
+  height: 32px;
+  width: 32px;
+  overflow: visible;
+  padding: 5px;
+  border-radius: 10px;
+  box-sizing: content-box;
 }
 
 .journey {
   width: 100vw;
-  padding: 5rem 0;
+  padding: 5rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -127,6 +166,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
 .journey-container li {
   display: flex;
@@ -148,7 +188,8 @@
 .impact {
   color: white;
   background-color: var(--dark-purple-background);
-  padding: 5rem 0;
+  padding: 5rem 1rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   align-items: center;
