@@ -1,0 +1,27 @@
+:root {
+  --main-font-family: sans-serif;
+  --gray-font-color: #717182;
+  --white-background-color: #fff;
+  --light-purple-background: #eeecf9;
+  --dark-purple-background: #3a24ba;
+  --text-main-purple: #3e27b8;
+  --heading-font-size: clamp(40px, 4.65vw, 4.65vw);
+  --used-heading-font-size: clamp(2rem, calc(1.25vw + 1.5rem), 3rem);
+  --heading-font-weight: 400;
+  --light-dark-purple: #e5e3f3;
+  --lightest-purple: #f9f9fa;
+  --border-color: #e5e5e5;
+  --small-font-size: 0.75rem;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+body {
+  padding-top: 60px;
+}
+/* Base Reset and Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

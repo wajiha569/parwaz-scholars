@@ -1,0 +1,11 @@
+body {
+  padding-top: 60px;
+}
+/* Base Reset and Box Sizing */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}

@@ -1,0 +1,167 @@
+.success-stories-section {
+  padding: 100px 20px;
+  background-color: var(--light-purple-background); /* #f5f3ff */
+  text-align: center;
+}
+
+.stories-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto 50px;
+}
+
+/* --- The Card --- */
+.story-card {
+  background: #ffffff;
+  padding: 50px 40px 40px;
+  border-radius: 28px;
+  text-align: left;
+  position: relative;
+  border: 1px solid rgba(58, 36, 186, 0.05);
+  transition: all 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 10px 30px rgba(58, 36, 186, 0.03);
+}
+
+.story-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 25px 50px rgba(58, 36, 186, 0.1);
+  background: #ffffff;
+}
+
+/* --- Decorative Quote Icon --- */
+.quote-icon {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  font-size: 2rem;
+  color: var(--dark-purple-background);
+  opacity: 0.1; /* Submerged look */
+}
+
+.scholar-quote {
+  font-size: 1.15rem;
+  line-height: 1.7;
+  color: #334155;
+  font-style: italic;
+  margin-bottom: 30px;
+  position: relative;
+  z-index: 2;
+  margin-top: 10px;
+}
+@media (max-width: 768px) {
+  .scholar-quote {
+    margin-top: 4vw;
+  }
+}
+
+/* --- Profile Section --- */
+.scholar-profile {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  border-top: 1px solid #f1f5f9;
+  padding-top: 25px;
+}
+
+.scholar-avatar {
+  width: 50px;
+  height: 50px;
+  background: var(--light-purple-background);
+  color: var(--dark-purple-background);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+.scholar-info {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+.scholar-name {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #1e1b4b;
+  margin: 0;
+  text-align: start;
+}
+
+.scholar-meta {
+  font-size: 0.85rem;
+  color: var(--gray-font-color);
+  margin: 2px 0 0 0;
+}
+
+/* --- Read More Button --- */
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .stories-grid {
+    grid-template-columns: 1fr;
+  }
+  .story-card {
+    padding: 40px 30px 30px;
+  }
+}
+
+.success-stories h2 {
+  font-size: clamp(1.6rem, 2vw, 2rem);
+  margin: 0;
+}
+
+.success-stories p {
+  color: var(--gray-font-color);
+  font-size: clamp(1rem, 1.25vw, 1.25rem);
+  max-width: 600px;
+  text-align: center;
+  margin: 0 auto;
+}
+
+.success-stories .card {
+  background-color: white;
+  max-width: 350px;
+  width: 100%;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  overflow: hidden;
+}
+
+.parent {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.parent p {
+  color: black;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1rem;
+  margin: 0;
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.one-child {
+  color: black;
+}
+
+.card i {
+  color: var(--gray-font-color);
+  font-size: 0.95rem;
+}
+
+.success-parent {
+  display: flex;
+  gap: 1.7rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}

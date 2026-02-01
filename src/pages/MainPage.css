@@ -1,0 +1,337 @@
+/* --- Responsive Layout --- */
+@media (max-width: 600px) {
+  .take-flight-section {
+    padding: 80px 20px;
+  }
+
+  .cta-buttons {
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+
+  .btn-cta-primary,
+  .btn-cta-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* Responsive styles */
+
+@media (max-width: 992px) {
+  .programs {
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  .card {
+    max-width: 320px;
+    padding: 18px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .read-more-button {
+    max-width: 220px;
+    min-width: 140px;
+    width: 100%;
+  }
+}
+
+@media (min-width: 740px) and (max-width: 767px) {
+  .programs {
+    display: flex;
+    justify-content: center; /* Center cards */
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    padding: 20px 0;
+  }
+
+  .card {
+    flex: 0 1 320px;
+    max-width: 320px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 665px) {
+  .programs {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center cards vertically */
+    padding: 0;
+    gap: 1.5rem;
+    width: 100%;
+  }
+
+  .card {
+    flex: none;
+    width: 100%;
+    max-width: 350px;
+    padding: 16px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .read-more-button {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .nav-bar {
+    padding: 0.8rem;
+  }
+
+  .hero-section {
+    height: auto;
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1rem;
+  }
+
+  .programs {
+    padding: 0;
+    gap: 1.5rem;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    padding: 15px;
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .card h4 {
+    font-size: 1.2rem;
+  }
+
+  .card p {
+    font-size: 0.9rem;
+  }
+
+  .read-more-button {
+    max-width: 100%;
+    min-width: unset;
+    width: 100%;
+    padding: 12px 0;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-section {
+    height: auto;
+    gap: 0.8rem;
+    padding: 2rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.6rem;
+    letter-spacing: 0.5px;
+  }
+
+  .hero-section h2 {
+    font-size: 0.9rem;
+  }
+
+  .hero-section p {
+    font-size: 1rem;
+  }
+
+  .buttons {
+    gap: 1rem;
+  }
+
+  .read-more-button {
+    padding: 10px 14px;
+    font-size: 0.95rem;
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+  }
+
+  .card {
+    padding: 12px;
+    margin: 0 1rem;
+    width: 90vw;
+    max-width: 350px;
+  }
+
+  .card h4 {
+    font-size: 1.1rem;
+  }
+
+  .card p {
+    font-size: 0.85rem;
+  }
+  .hero-badge {
+    font-size: 2.5vw;
+    padding: 8px 4vw;
+    padding-top: 8px;
+    padding-top: 1.3vh;
+    gap: 3vw;
+  }
+}
+
+@media (min-width: 1200px) {
+  .hero-section {
+    height: 80vh;
+  }
+
+  .hero-section h1 {
+    font-size: 3rem;
+  }
+
+  .hero-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .card {
+    width: 350px;
+  }
+
+  .read-more-button {
+    max-width: 220px;
+    min-width: 140px;
+    width: 100%;
+  }
+}
+
+@media (max-width: 320px) {
+  .nav-bar {
+    padding: 0.5rem;
+  }
+
+  .hero-section {
+    height: auto;
+    padding: 1.5rem 1rem;
+  }
+
+  .hero-section h1 {
+    font-size: 1.4rem;
+  }
+
+  .hero-section h2 {
+    font-size: 0.8rem;
+  }
+
+  .buttons {
+    gap: 1rem;
+  }
+
+  .card {
+    padding: 10px;
+    margin: 0 1rem;
+    width: 90vw;
+    max-width: 350px;
+  }
+
+  .card h4 {
+    font-size: 1rem;
+  }
+
+  .read-more-button {
+    max-width: 100%;
+    width: 100%;
+    min-width: unset;
+    padding: 10px 0;
+  }
+}
+
+@media (min-width: 482px) and (max-width: 576px) {
+  .programs-content {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}
+@media (max-width: 416px) {
+  .programs-content {
+    margin-right: 2rem;
+    padding-right: 2rem;
+  }
+}
+
+/* Medium screens */
+@media (max-width: 992px) {
+  .programs-container {
+    padding: 1.5rem 1rem;
+  }
+  .programs-content {
+    padding: 2rem 1rem;
+  }
+  .programs {
+    gap: 1.5rem;
+  }
+  .card {
+    max-width: 320px;
+    padding: 18px;
+  }
+}
+
+/* Tablets and below */
+@media (max-width: 665px) {
+  .programs-container {
+    padding: 1rem 1rem;
+  }
+  .programs-content {
+    padding: 1.5rem 1rem;
+  }
+  .programs {
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    padding: 0;
+  }
+  .card {
+    width: 100%;
+    max-width: 350px;
+    padding: 16px;
+  }
+}
+
+/* Small phones */
+@media (max-width: 480px) {
+  .programs-container {
+    padding: 1rem 0.5rem;
+  }
+  .programs-content {
+    padding: 1rem 0.5rem;
+  }
+  .card {
+    width: 90vw;
+    max-width: 350px;
+    padding: 12px;
+    margin: 0 auto;
+  }
+}
+
+/* Very small phones */
+@media (max-width: 320px) {
+  .programs-container {
+    padding: 0.8rem 0.5rem;
+  }
+  .programs-content {
+    padding: 0.8rem 0.5rem;
+  }
+  .card {
+    width: 90vw;
+    max-width: 350px;
+    padding: 10px;
+    margin: 0 auto;
+  }
+}
