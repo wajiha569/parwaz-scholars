@@ -1,0 +1,377 @@
+/* --- Impact Dashboard Refinement --- */
+.impact-dashboard {
+  background-color: var(
+    --dark-purple-background
+  ); /* Your Brand Color #3a24ba */
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle background glow to add depth to the flat purple */
+.impact-dashboard::after {
+  content: "";
+  position: absolute;
+  bottom: -20%;
+  left: -10%;
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 255, 255, 0.05);
+  filter: blur(100px);
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.impact-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 35px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+
+  /* --- The Magic Mix --- */
+  /* 1. Use a 'Back Out' bezier curve for a slight spring effect */
+  /* 2. Transition multiple properties at different speeds if needed */
+  transition:
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.3s ease,
+    box-shadow 0.4s ease,
+    border 0.3s ease;
+
+  will-change: transform; /* Optimizes performance for smooth movement */
+}
+
+.stat-card:hover {
+  /* Lift the card and scale it up very slightly */
+  transform: translateY(-12px) scale(1.02);
+
+  /* Brighten the glass effect */
+  background: rgba(255, 255, 255, 0.18);
+  border-color: rgba(255, 255, 255, 0.4);
+
+  /* Add a layered shadow for depth: one sharp, one blurry */
+  box-shadow:
+    0 10px 20px rgba(0, 0, 0, 0.1),
+    0 25px 50px rgba(0, 0, 0, 0.2);
+}
+
+/* Add a subtle interaction to the icon too */
+.stat-card:hover .stat-icon-box {
+  transform: scale(1.1) rotate(-5deg);
+  transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+/* Icon Box: High Contrast White on Purple */
+.stat-icon-box {
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.6rem;
+  color: var(--dark-purple-background); /* Icon takes the brand color */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  flex-shrink: 0;
+}
+
+.stat-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 500;
+  color: white;
+  line-height: 1;
+  margin-bottom: 4px;
+  letter-spacing: -1px;
+}
+
+.stat-label {
+  color: rgba(
+    255,
+    255,
+    255,
+    0.7
+  ); /* Slightly transparent white for hierarchy */
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+@media (max-width: 768px) {
+  .stat-card {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px;
+  }
+}
+@import url("./Main.css");
+
+/* --- Global Section Settings --- */
+body {
+  padding-top: 80px;
+  font-family: "Inter", sans-serif;
+}
+
+/* --- Hero Section --- */
+.about-hero {
+  padding: 100px 20px;
+  background: var(--light-purple-background);
+  text-align: center;
+}
+
+.hero-description {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+  color: var(--gray-font-color);
+  line-height: 1.8;
+}
+
+/* --- Mission/Vision Cards --- */
+.mission-vision {
+  padding: 80px 20px;
+  background: #f8fafc;
+}
+.split-cards {
+  display: flex;
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+.mv-card {
+  flex: 1;
+  background: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease;
+}
+.mv-card:hover {
+  transform: translateY(-5px);
+}
+.card-accent {
+  height: 6px;
+  width: 100%;
+}
+.mv-card.mission .card-accent {
+  background: var(--text-main-purple);
+}
+.mv-card.vision .card-accent {
+  background: #0ea5e9;
+}
+.card-inner {
+  padding: 40px;
+}
+.icon-box {
+  width: 50px;
+  height: 50px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  font-size: 1.2rem;
+}
+.icon-box.purple {
+  background: rgba(99, 102, 241, 0.1);
+  color: var(--text-main-purple);
+}
+.icon-box.blue {
+  background: rgba(14, 165, 233, 0.1);
+  color: #0ea5e9;
+}
+
+/* --- Values Section --- */
+.values-section {
+  padding: 100px 20px;
+  background: #fcfaff;
+}
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.value-item {
+  background: white;
+  padding: 40px 30px;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.1);
+}
+.value-item .lucide-container {
+  width: 60px;
+  height: 60px;
+  background: var(--light-purple-background);
+  border-radius: 15px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s;
+}
+.value-item:hover .lucide-container {
+  background: var(--text-main-purple);
+  color: white;
+  transform: rotate(-5deg);
+}
+.card-footer-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: var(--text-main-purple);
+  transition: 0.3s;
+  transform: translateX(-50%);
+}
+.value-item:hover .card-footer-line {
+  width: 40%;
+}
+
+/* --- Timeline --- */
+.timeline-section {
+  padding: 100px 20px;
+}
+.timeline-container {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+}
+.timeline-track {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(
+    to bottom,
+    transparent,
+    var(--text-main-purple),
+    transparent
+  );
+}
+.timeline-card-wrapper {
+  position: relative;
+  padding-left: 70px;
+  margin-bottom: 50px;
+}
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 40px;
+  height: 40px;
+  background: white;
+  border: 2px solid var(--text-main-purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+.timeline-card {
+  background: white;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  border: 1px solid var(--border-color);
+}
+.timeline-card-wrapper.active .timeline-marker {
+  background: var(--text-main-purple);
+  color: white;
+}
+
+/* --- Impact Dashboard (The Snappy Version) --- */
+.impact-dashboard {
+  background: var(--dark-purple-background);
+  padding: 100px 20px;
+  position: relative;
+  overflow: hidden;
+}
+.impact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  max-width: 1100px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 2;
+}
+.stat-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 35px 25px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition:
+    transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1),
+    background 0.3s ease,
+    box-shadow 0.4s ease;
+  will-change: transform;
+}
+.stat-card:hover {
+  transform: translateY(-12px) scale(1.02);
+  background: rgba(255, 255, 255, 0.18);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+  border-color: rgba(255, 255, 255, 0.4);
+}
+.stat-icon-box {
+  width: 64px;
+  height: 64px;
+  background: white;
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  color: var(--dark-purple-background);
+  flex-shrink: 0;
+  transition: 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.stat-card:hover .stat-icon-box {
+  transform: scale(1.1) rotate(-5deg);
+}
+.stat-number {
+  font-size: 2.8rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 5px;
+  display: block;
+}
+.stat-label {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}

@@ -1,0 +1,43 @@
+:root {
+  --brand-purple: #6366f1;
+  --brand-dark: #0f172a;
+  --brand-gray: #64748b;
+  --surface: #ffffff;
+  --bg-subtle: #f8fafc;
+}
+.about-hero {
+  padding: 120px 20px 80px;
+  background: var(--light-purple-background);
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 400;
+  color: var(--brand-dark);
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.text-gradient {
+  background: var(--text-main-purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-description {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.2rem;
+  color: var(--brand-gray);
+  line-height: 1.7;
+}
+
+.badge-outline {
+  font-size: 0.75rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+  opacity: 0.9;
+}

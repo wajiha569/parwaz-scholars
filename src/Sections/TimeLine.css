@@ -1,0 +1,157 @@
+.introduction {
+  padding: min(5rem, 15%) 0;
+  background-color: var(--light-purple-background);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 1rem;
+}
+
+.introduction-container {
+  width: 100%;
+  max-width: 784px;
+  min-width: 320px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+/* --- Timeline Section Refinement --- */
+.timeline-section {
+  padding: 8rem 2rem;
+  background-color: var(--white-background-color);
+}
+
+.timeline-container {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+/* The Vertical Track */
+.timeline-track {
+  position: absolute;
+  left: 20px; /* Aligned with markers on mobile/small screens */
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(
+    to bottom,
+    var(--light-purple-background) 0%,
+    var(--text-main-purple) 50%,
+    var(--light-purple-background) 100%
+  );
+  border-radius: 10px;
+}
+
+.timeline-card-wrapper {
+  position: relative;
+  padding-left: 70px; /* Space for marker and line */
+  margin-bottom: 4rem;
+}
+
+/* The Marker (Circle with Icon) */
+.timeline-marker {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 44px;
+  height: 44px;
+  background: white;
+  border: 3px solid var(--text-main-purple);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  color: var(--text-main-purple);
+  font-size: 1rem;
+  box-shadow: 0 0 0 5px var(--white-background-color);
+}
+
+.timeline-card-wrapper.active .timeline-marker {
+  background: var(--text-main-purple);
+  color: white;
+}
+
+/* The Content Card */
+.timeline-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.08);
+  border: 1px solid var(--border-color);
+  transition: all 0.3s ease;
+}
+
+.timeline-card:hover {
+  transform: translateX(10px);
+  box-shadow: 0 15px 35px rgba(99, 102, 241, 0.15);
+  border-color: transparent;
+}
+
+/* Header Inside Card */
+.timeline-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 1.5rem;
+}
+
+.year-badge {
+  font-weight: 800;
+  font-size: 1.2rem;
+  color: var(--text-main-purple);
+}
+
+.status-tag {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  background: var(--light-purple-background);
+  color: var(--text-main-purple);
+  padding: 4px 12px;
+  padding-top: 6px;
+  border-radius: 50px;
+}
+
+/* Active State Pulsing Effect */
+.status-tag.pulse {
+  background: #22c55e; /* Success Green */
+  color: white;
+  animation: soft-pulse 2s infinite;
+}
+
+@keyframes soft-pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.4);
+  }
+  70% {
+    box-shadow: 0 0 0 10px rgba(34, 197, 94, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
+  }
+}
+
+.timeline-card h4 {
+  font-size: 1.4rem;
+  margin-bottom: 0.75rem;
+  color: var(--text-main-purple);
+  font-weight: 700;
+}
+
+.timeline-card p {
+  color: var(--gray-font-color);
+  line-height: 1.7;
+  font-size: 1rem;
+  margin: 0;
+}
+
+/* Responsive Tweak for Desktop (Optional: Alternating) */
+@media (min-width: 1024px) {
+  /* You can add logic here to make cards alternate sides, 
+     but for a "Flight" theme, a single direct path usually feels better. */
+}

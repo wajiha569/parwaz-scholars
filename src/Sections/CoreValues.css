@@ -1,0 +1,135 @@
+/* Container Background & Spacing */
+.values-section {
+  background-color: #fcfaff; /* A very slight purple tint for a premium feel */
+  padding: 8rem 2rem;
+  display: flex;
+  justify-content: center;
+}
+
+.introduction-container {
+  max-width: 1200px;
+  width: 100%;
+}
+
+.section-intro {
+  margin-bottom: 5rem;
+  text-align: center;
+}
+
+/* Grid Logic */
+.values-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2.5rem;
+}
+
+/* The Card Modernization */
+.value-item {
+  background: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  text-align: center;
+  position: relative;
+  border: none; /* Removed the hard border */
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.05); /* Softest shadow imaginable */
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Icon Floating Effect */
+.value-icon-wrapper {
+  margin-bottom: 1.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.value-item .lucide-container {
+  width: 70px;
+  height: 70px;
+  background-color: var(--light-purple-background);
+  border-radius: 18px; /* Squircle look */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.3s ease;
+}
+
+.value-item .lucide-container i {
+  font-size: 1.5rem;
+  color: var(--text-main-purple);
+  margin-top: 0; /* Cleaned up margin */
+}
+
+/* Typography Refinement */
+.value-item h4 {
+  color: var(--text-main-purple);
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.value-item p {
+  color: var(--gray-font-color);
+  font-size: 1rem;
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Hover States - Subtle & High-End */
+.value-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
+}
+
+.value-item:hover .lucide-container {
+  background-color: var(--text-main-purple);
+  transform: rotate(-5deg); /* Professional micro-interaction */
+}
+
+.value-item:hover .lucide-container i {
+  color: white;
+}
+
+/* The "Indicator" Line */
+.card-footer-line {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 4px;
+  background: var(--text-main-purple);
+  border-radius: 2px 2px 0 0;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.value-item:hover .card-footer-line {
+  width: 40%; /* Expands on hover */
+}
+
+/* Badge (Type) Styling */
+.type {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--text-main-purple);
+  background: rgba(99, 102, 241, 0.1);
+  padding: 6px 16px;
+  padding-top: 8px;
+  border-radius: 50px;
+  margin-bottom: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .values-section {
+    padding: 4rem 1rem;
+  }
+  .values-grid {
+    gap: 1.5rem;
+  }
+}
