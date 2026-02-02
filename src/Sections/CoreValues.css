@@ -1,6 +1,6 @@
 /* Container Background & Spacing */
 .values-section {
-  background-color: #fcfaff; /* A very slight purple tint for a premium feel */
+  background-color: #fcfaff;
   padding: 8rem 2rem;
   display: flex;
   justify-content: center;
@@ -16,29 +16,35 @@
   text-align: center;
 }
 
-/* Grid Logic */
+/* Responsive Grid Logic */
 .values-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  /* auto-fit makes cards wrap, minmax prevents them from getting too skinny */
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 2.5rem;
+  width: 100%;
 }
 
-/* The Card Modernization */
+/* Card Styling */
 .value-item {
   background: white;
-  padding: 3rem 2rem;
+  padding: 3.5rem 2rem;
   border-radius: 20px;
   text-align: center;
   position: relative;
-  border: none; /* Removed the hard border */
-  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.05); /* Softest shadow imaginable */
+  box-shadow: 0 10px 30px rgba(99, 102, 241, 0.05);
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+
+  /* These properties prevent the "shorter" look */
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: flex-start;
+  min-height: 380px;
+  height: 100%;
 }
 
-/* Icon Floating Effect */
+/* Icon Styles */
 .value-icon-wrapper {
   margin-bottom: 1.5rem;
   position: relative;
@@ -48,8 +54,8 @@
 .value-item .lucide-container {
   width: 70px;
   height: 70px;
-  background-color: var(--light-purple-background);
-  border-radius: 18px; /* Squircle look */
+  background-color: var(--light-purple-background, #f3f4ff);
+  border-radius: 18px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -58,78 +64,93 @@
 
 .value-item .lucide-container i {
   font-size: 1.5rem;
-  color: var(--text-main-purple);
-  margin-top: 0; /* Cleaned up margin */
+  color: var(--text-main-purple, #6366f1);
 }
 
-/* Typography Refinement */
+/* Typography */
 .value-item h4 {
-  color: var(--text-main-purple);
+  color: var(--text-main-purple, #6366f1);
   font-size: 1.4rem;
   margin-bottom: 1rem;
   font-weight: 700;
-  letter-spacing: -0.02em;
 }
 
 .value-item p {
-  color: var(--gray-font-color);
+  color: var(--gray-font-color, #64748b);
   font-size: 1rem;
   line-height: 1.7;
   margin: 0;
 }
 
-/* Hover States - Subtle & High-End */
+/* Hover States */
 .value-item:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(99, 102, 241, 0.12);
+  transform: translateY(-12px);
+  box-shadow: 0 25px 50px rgba(99, 102, 241, 0.12);
 }
 
 .value-item:hover .lucide-container {
-  background-color: var(--text-main-purple);
-  transform: rotate(-5deg); /* Professional micro-interaction */
+  background-color: var(--text-main-purple, #6366f1);
+  transform: rotate(-5deg);
 }
 
 .value-item:hover .lucide-container i {
   color: white;
 }
 
-/* The "Indicator" Line */
+/* Footer Interaction Line */
 .card-footer-line {
   position: absolute;
   bottom: 0;
   left: 50%;
   width: 0;
   height: 4px;
-  background: var(--text-main-purple);
+  background: var(--text-main-purple, #6366f1);
   border-radius: 2px 2px 0 0;
-  transition: all 0.3s ease;
+  transition: all 0.4s ease;
   transform: translateX(-50%);
 }
 
 .value-item:hover .card-footer-line {
-  width: 40%; /* Expands on hover */
+  width: 50%;
 }
 
-/* Badge (Type) Styling */
+/* Badge Styling */
 .type {
   display: inline-block;
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.15em;
-  color: var(--text-main-purple);
+  letter-spacing: 0.1em;
+  color: var(--text-main-purple, #6366f1);
   background: rgba(99, 102, 241, 0.1);
-  padding: 6px 16px;
-  padding-top: 8px;
+  padding: 6px 14px;
   border-radius: 50px;
   margin-bottom: 1.5rem;
+}
+
+/* --- Responsive Breakpoints --- */
+@media (max-width: 1024px) {
+  .values-section {
+    padding: 6rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
   .values-section {
     padding: 4rem 1rem;
   }
+
+  .section-intro {
+    margin-bottom: 3rem;
+  }
+
   .values-grid {
+    grid-template-columns: 1fr; /* Stack cards on mobile */
     gap: 1.5rem;
+  }
+
+  .value-item {
+    min-height: auto; /* Let content dictate height on mobile */
+    padding: 2.5rem 1.5rem;
   }
 }

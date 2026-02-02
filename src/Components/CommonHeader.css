@@ -22,7 +22,7 @@
   color: #1e1b4b;
   margin-bottom: 15px;
 }
-.section-description {
+.section-description !important {
   color: var(--gray-font-color);
   font-size: 1.1rem;
   line-height: 1.6;

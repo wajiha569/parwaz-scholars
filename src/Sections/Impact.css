@@ -125,9 +125,7 @@
     padding: 40px 20px;
   }
 }
-@import url("./Main.css");
 
-/* --- Global Section Settings --- */
 body {
   padding-top: 80px;
   font-family: "Inter", sans-serif;
@@ -139,15 +137,6 @@ body {
   background: var(--light-purple-background);
   text-align: center;
 }
-
-.hero-description {
-  max-width: 800px;
-  margin: 0 auto;
-  font-size: 1.15rem;
-  color: var(--gray-font-color);
-  line-height: 1.8;
-}
-
 /* --- Mission/Vision Cards --- */
 .mission-vision {
   padding: 80px 20px;
