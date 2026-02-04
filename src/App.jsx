@@ -3,6 +3,7 @@ import Nav from "./Sections/Nav.jsx";
 import Footer from "./Sections/Footer.jsx";
 import MainPage from "./pages/MainPage.jsx";
 import AboutUs from "./pages/AboutUs.jsx";
+import Apply from "./pages/Apply.jsx";
 import "./App.css";
 
 function App() {
@@ -12,6 +13,7 @@ function App() {
       <Routes>
         <Route path="/" element={<MainPage />} />
         <Route path="/about" element={<AboutUs />} />
+        <Route path="/apply" element={<Apply />} />
       </Routes>
       <Footer />
     </BrowserRouter>
