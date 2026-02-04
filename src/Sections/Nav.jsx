@@ -71,7 +71,7 @@ export default function Nav() {
           <Link to="/" className="page-link" onClick={closeMenu}>
             Home
           </Link>
-          <Link to="/about-us" className="page-link" onClick={closeMenu}>
+          <Link to="/about" className="page-link" onClick={closeMenu}>
             About Us
           </Link>
           <Link to="/programs" className="page-link" onClick={closeMenu}>
