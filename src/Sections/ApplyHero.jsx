@@ -5,11 +5,7 @@ export default function ApplyHero() {
     <section className="apply-hero">
       <div className="apply-container">
         <div className="apply-card">
-          <img
-            src="../../public/entry-test.png"
-            alt="Entry Test"
-            className="card-img"
-          />
+          <img src="./entry-test.png" alt="Entry Test" className="card-img" />
           <h2>Apply for Entry Test</h2>
           <p>
             Ready to prove your skills? Register now for our entry test and take
@@ -25,11 +21,7 @@ export default function ApplyHero() {
         </div>
 
         <div className="apply-card">
-          <img
-            src="../../public/social.png"
-            alt="Join Group"
-            className="card-img"
-          />
+          <img src="./social.png" alt="Join Group" className="card-img" />
           <h2>Join Our Group</h2>
           <p>
             Connect with peers, share resources, and stay updated by joining our

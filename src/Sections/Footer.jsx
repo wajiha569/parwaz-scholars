@@ -4,7 +4,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-col about">
-          <img src="/images/parwaz-logo1.png" alt="Logo" className="logo" />
+          <img src="./parwaz-logo.png" alt="Logo" className="logo" />
           <p>
             Empowering exceptional students to soar to new heights through
             comprehensive educational scholarships, mentorship, and
