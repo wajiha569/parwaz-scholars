@@ -1,6 +1,6 @@
 import Hero from "../Sections/Hero.jsx";
 import AccomplishmentsSection from "../Sections/AccomplishmentsSection.jsx";
-import Programs from "../Sections/Programs.jsx";
+import Programs from "./Programs.jsx";
 import Success from "../Sections/Success.jsx";
 import Flight from "../Sections/Flight.jsx";
 import "./MainPage.css";

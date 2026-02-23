@@ -1,0 +1,71 @@
+/* Ensure the body and html don't have default spacing */
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#main1-content {
+  /* Dimensions */
+  width: 100vw;
+  height: 100vh;
+
+  /* Centering the child */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  /* Background styling */
+  /* Replace the URL with your actual background image */
+  background-color: var(--light-purple-background);
+}
+
+.main-part {
+  /* Card Styling */
+  background-color: rgba(255, 255, 255, 0.95); /* Opaque white background */
+  padding: 3rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+
+  /* Content Alignment */
+  text-align: center;
+  max-width: 500px;
+  width: 90%; /* Responsive width for smaller screens */
+}
+
+.main-part h1 {
+  font-size: 2rem;
+  color: #1a1a1a;
+  margin-bottom: 1rem;
+}
+
+.main-part p {
+  font-size: 1.1rem;
+  color: #4a4a4a;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+}
+
+.apply-now {
+  background-color: #007bff; /* Primary action color */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  font-weight: 600;
+  border-radius: 8px;
+  cursor: pointer;
+  transition:
+    transform 0.2s,
+    background-color 0.2s;
+}
+
+.apply-now:hover {
+  background-color: #0056b3;
+  transform: translateY(-2px);
+}
+
+.apply-now:active {
+  transform: translateY(0);
+}

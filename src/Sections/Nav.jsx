@@ -87,7 +87,11 @@ export default function Nav() {
           <Link to="/resources" className="page-link hide3" onClick={closeMenu}>
             Resources
           </Link>
-          <Link to="/news" className="page-link hide2" onClick={closeMenu}>
+          <Link
+            to="/news-event"
+            className="page-link hide2"
+            onClick={closeMenu}
+          >
             News & Events
           </Link>
           <Link to="/get-involved" className="page-link" onClick={closeMenu}>
